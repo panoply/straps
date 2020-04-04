@@ -1,14 +1,15 @@
+
+###### DISCLAIMER :trollface:
+
+> The straps are configured according to my personal tastes, these are not the standard "boilerplates" that you nerds gather in groups and furiously relieve yourselves over, they're opinionated and much like your high school crush, probably not for you. Prove me wrong?
+
 # Straps
 
 Starting point boilerplates "straps" I use when creating web apps, plugins, websites, software and other code related shit. Feel free to fork, use yourself or reference. Do what the fuck you want because just like your Mom, it's open source.
 
 Contributions and/or issues are welcome.
 
-###### DISCLAIMER :trollface:
-
-> The straps are configured according to my personal tastes, these are not the standard "boilerplates" that you nerds gather in groups and furiously relieve yourselves over, they're opinionated and much like your high school crush, probably not for you. Prove me wrong?
-
-# G'wan, get em
+# :trollface:  G'wan, get em
 
 | Project                        | Last Updated |
 | ------------------------------ | ------------ |
