@@ -1,5 +1,5 @@
 
-###### DISCLAIMER :trollface:
+###### :trollface: DISCLAIMER
 
 > The straps are configured according to my personal tastes, these are not the standard "boilerplates" that you nerds gather in groups and furiously relieve yourselves over, they're opinionated and much like your high school crush, probably not for you. Prove me wrong?
 
@@ -9,7 +9,7 @@ Starting point boilerplates "straps" I use when creating web apps, plugins, webs
 
 Contributions and/or issues are welcome.
 
-# :trollface:  G'wan, get em
+### G'wan, get em
 
 | Project                        | Last Updated |
 | ------------------------------ | ------------ |
@@ -31,6 +31,4 @@ Contributions and/or issues are welcome.
 | [vscode-grammar-strap](#)      |              |
 | [vscode-lsp-strap](#)          |              |
 
-###### ULTRAVIOLENCE
 
-<img  src="https://github.com/panoply/straps/blob/master/img.gif?raw=true"  width="100%">
