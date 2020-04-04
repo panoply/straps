@@ -4,10 +4,9 @@ Starting point boilerplates "straps" I use when creating web apps, plugins, webs
 
 Contributions and/or issues are welcome.
 
-###### DISCLAIMER
+###### DISCLAIMER :trollface:
 
-<small>The straps are configured according to my personal tastes, these are not the standard "boilerplates" that you nerds gather in groups and furiously relieve yourselves over, they're opinionated and much like your high school crush, probably not for you. Prove me wrong? :trollface:
-</small>
+> The straps are configured according to my personal tastes, these are not the standard "boilerplates" that you nerds gather in groups and furiously relieve yourselves over, they're opinionated and much like your high school crush, probably not for you. Prove me wrong?
 
 # G'wan, get em
 
