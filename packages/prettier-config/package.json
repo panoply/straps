@@ -1,0 +1,27 @@
+{
+  "name": "@sissel/prettier-config",
+  "version": "1.0.0",
+  "description": "Shared prettier config",
+  "main": "prettier.cjs",
+  "prettier": "./prettier.cjs",
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "prettierconfig",
+    "config",
+    "formatting"
+  ],
+  "scripts": {
+    "bump": "pnpm up @sissel/prettier-config -r",
+    "postversion": "pnpm bump"
+  },
+  "engines": {
+    "pnpm": ">=6"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "peerDependencies": {
+    "prettier": "^2.4.1"
+  }
+}

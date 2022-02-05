@@ -1,0 +1,16 @@
+{
+  "name": "sissel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build straps",
+  "scripts": {
+    "dev": "pnpm dev --filter ./packages/",
+    "build": "pnpm dev --filter ./packages/",
+    "dev:all": "pnpm dev -r --no-sort --workspace-concurrency Infinity",
+    "build:all": "pnpm build -r --stream --filter ./packages/ --workspace-concurrency Infinity",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@sissel/prettier-config": "workspace:^1.0.0"
+  }
+}
