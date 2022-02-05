@@ -1,6 +1,6 @@
 {
   "name": "@sissel/rollup-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared rollup configuration.",
   "type": "module",
   "main": "dist/index.js",
@@ -9,7 +9,6 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "bump": "pnpm up @sissel/rollup-config -r",
-    "postinstall": "pnpm build",
     "postversion": "pnpm bump",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
