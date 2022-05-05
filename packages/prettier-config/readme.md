@@ -1,4 +1,4 @@
-## @brixtol/prettier-config
+## @sissel/prettier-config
 
 This package includes the shareable Prettier configuration.
 
@@ -43,7 +43,6 @@ Install the [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?
 }
 ```
 
-
 ### Ignored Files
 
 I do not leverage prettier for various file types because it is extremely opinionated and conflicts with my code style, especially that found in JavaScript and TypeScript based projects. In almost all projects a `.prettierignore` file is included to prevent prettier from wreaking utter havoc in my development workspaces. Below is standard ignores asserted:
@@ -59,9 +58,6 @@ I do not leverage prettier for various file types because it is extremely opinio
 *.html
 ```
 
-
 ### License
 
 [MIT](#LICENSE)
-
-
