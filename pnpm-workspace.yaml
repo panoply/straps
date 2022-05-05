@@ -3,4 +3,5 @@ packages:
   - "packages/tsconfig"
   - "packages/prettier-config"
   - "packages/rollup-config"
+  - "packages/stylelint-config"
 
