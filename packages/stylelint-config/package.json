@@ -1,0 +1,34 @@
+{
+  "name": "@sissel/stylelint-config",
+  "version": "1.0.0",
+  "description": "Shared stylelint config",
+  "main": "stylelint.cjs",
+  "license": "MIT",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "config",
+    "linting",
+    "formatting"
+  ],
+  "scripts": {
+    "bump": "pnpm up @sissel/stylelint-config -r",
+    "postversion": "pnpm bump"
+  },
+  "engines": {
+    "pnpm": ">=6"
+  },
+  "devDependencies": {
+    "stylelint": "^14.8.2"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.8.2"
+  },
+  "dependencies": {
+    "postcss": "^8.4.13",
+    "postcss-scss": "^4.0.4",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.2.0"
+  }
+}
