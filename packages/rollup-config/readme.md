@@ -4,6 +4,8 @@ Shareable rollup configuration. The module acts as an interface, it exports an i
 
 # Install
 
+[Rollup](https://rollupjs.org/guide/en/) and [ESBuild](https://esbuild.github.io/) exist as a peer dependency. [PostCSS](https://postcss.org/), [AutoPrefixer](https://autoprefixer.github.io/) and [TypeScript](https://typescriptlang.org/) exist as optional dependencies. Install them when you require the plugins related.
+
 ```cli
 pnpm add @sissel/rollup-config -D
 ```
@@ -33,7 +35,7 @@ export default rollup(
       ]
     )(
       [
-        plugin.terser()
+        plugin.esminify()
       ]
     )
   }
@@ -43,6 +45,8 @@ export default rollup(
 ### Rollup + ESBuild
 
 This package is using ESBuild together will Rollup. TypeScript and JavaScript modules are processed with [esbuild](https://esbuild.github.io/) using [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild).
+
+> **Note** Rollup will inevitably die out as ESBuild starts to become the standard.
 
 ### Utilities Helper
 
