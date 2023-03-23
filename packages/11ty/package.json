@@ -1,0 +1,39 @@
+{
+  "name": "@sissel/11ty",
+  "version": "1.0.0",
+  "description": "An 11ty wrapper for type supported configurations",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "bump": "pnpm up @sissel/rollup-config -r",
+    "postversion": "pnpm bump",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": "@sissel/prettier-config",
+  "eslintConfig": {
+    "extends": "@sissel/eslint-config",
+    "ignorePatterns": [
+      "dist"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@sissel/eslint-config": "workspace:^1.0.0",
+    "@sissel/prettier-config": "workspace:^1.0.0",
+    "@sissel/tsconfig": "workspace:^1.0.0"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@types/browser-sync": "^2.26.3",
+    "html-minifier-terser": "7.0.0-alpha.2",
+    "svg-sprite": "^1.5.4"
+  }
+}
