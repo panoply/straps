@@ -11,6 +11,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@sissel/prettier-config": "workspace:^1.0.0"
+    "@sissel/prettier-config": "workspace:^"
   }
 }

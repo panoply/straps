@@ -1,13 +1,12 @@
 {
   "name": "@sissel/11ty",
-  "version": "1.0.0",
-  "description": "An 11ty wrapper for type supported configurations",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.1.0",
+  "description": "An 11ty wrapper with common plugin integrations.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
+    "dev": "tsup --watch",
+    "build": "tsup --minify",
     "bump": "pnpm up @sissel/rollup-config -r",
     "postversion": "pnpm bump",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,19 +20,31 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.1",
+    "@panoply/11ty": "^0.3.0",
     "@sissel/eslint-config": "workspace:^1.0.0",
-    "@sissel/prettier-config": "workspace:^1.0.0",
-    "@sissel/tsconfig": "workspace:^1.0.0"
+    "@sissel/prettier-config": "workspace:^",
+    "@sissel/tsconfig": "workspace:^1.0.0",
+    "@types/html-minifier-terser": "^7.0.2",
+    "@types/markdown-it": "^13.0.7",
+    "@types/mergerino": "^0.4.4",
+    "@types/svg-sprite": "^0.0.38",
+    "tsup": "^8.0.1",
+    "type-fest": "^4.9.0"
   },
   "peerDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "@panoply/11ty": "^0.2.0"
   },
   "dependencies": {
-    "@11ty/eleventy-navigation": "^0.3.3",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "@types/browser-sync": "^2.26.3",
-    "html-minifier-terser": "7.0.0-alpha.2",
-    "svg-sprite": "^1.5.4"
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@types/browser-sync": "^2.29.0",
+    "fast-glob": "^3.3.2",
+    "html-minifier-terser": "7.2.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-container": "^4.0.0",
+    "mergerino": "^0.4.0",
+    "svg-sprite": "^2.0.2"
   }
 }

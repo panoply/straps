@@ -33,12 +33,6 @@ Install the [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode" // disabled in brixtol packages
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode" // disabled in brixtol packages
   }
 }
 ```

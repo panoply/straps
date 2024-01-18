@@ -3,7 +3,7 @@
  *
  * @type {import('prettier').Options}
  */
-module.exports = {
+export default {
   arrowParens: 'avoid',
   bracketSpacing: true,
   htmlWhitespaceSensitivity: 'css',
@@ -20,6 +20,13 @@ module.exports = {
   trailingComma: 'none',
   useTabs: false,
   overrides: [
+    {
+      files: ['**/*.scss'],
+      options: {
+        parser: 'scss',
+        printWidth: 100
+      }
+    },
     {
       files: ['**/*.md'],
       options: {

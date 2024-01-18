@@ -1,11 +1,13 @@
 # @sissel/11ty
 
-Shareable [Eleventy](https://www.11ty.dev/) configuration strap. The module acts as an interface, it exports an instance of 11ty and several plugins that are frequently used. It also provide Type support because we are not animals and we live in a society. It's just a simply wrapper around Eleventy.
+Shareable [Eleventy](https://www.11ty.dev/) configuration strap. The module acts as an interface, it exports various plugins used in the project I write using Eleventy.
 
 # Install
 
+Use this alongside [@panoply/11ty](https://github.com/panoply/11ty) for type completions.
+
 ```cli
-pnpm add @sissel/rollup-config -D
+pnpm add @sissel/11ty -D
 ```
 
 # Usage
@@ -14,10 +16,56 @@ This is CJS module because 11ty is not ESM. Use it within a `.eleventy.js` or `.
 
 <!-- prettier-ignore -->
 ```ts
-const { eleventy, plugin } = require("@sissel/11ty");
+const eleventy = require('@panoply/11ty');
+const papyrus = require('papyrus');
+const { eleventy, markdown, terser, sprite, versions } = require("@sissel/11ty");
 
 module.exports = eleventy(function(config) {
 
+  // Markdown Integration
+  // The syntax callback function will return the extracted code block regions in .md files
+  markdown(config, {
+    options: {
+      breaks: true,
+      html: true,
+    },
+    syntax({ language, raw }) {
+
+      // Use the language property to determine the language name of code block
+      if (language === 'liquid') {
+
+        // Return a Papyrus <pre> and <code> block of highlighted code
+        // You will need to add the papyrus stylesheet manually.
+        return papyrus.static(raw, {
+          language,
+          editor: false,
+          showSpace: false,
+          trimEnd: true,
+          trimStart: true
+        })
+      }
+
+      // Return input as is if you want to skip highlighting
+      return raw;
+    }
+  })
+
+  // The versions plugin will generate static sub-folders
+  // See the Relapse documentation repository for an example.
+  //
+  config.addPlugin(versions, { version: require('./package.json').version })
+
+  // Generates an SVG Sprite using SVG Sprite. The maintainer of the
+  // official eleventy plugin is a bitch, so we merely expand upon his
+  // shitty work and make things cleaner in this variation
+  //
+  config.addPlugin(sprite, { inputPath: 'src/assets/svg' });
+
+  // Applied terse distribution when ENV equals "prod"
+  // Pass in html-terser options as needed, there are a bunch of
+  // standard defaults I've applied
+  //
+  config.addPlugin(terser, { prodOnly: true });
 
   return {
     htmlTemplateEngine: 'liquid',
@@ -41,16 +89,6 @@ module.exports = eleventy(function(config) {
   }
 });
 ```
-
-### Rollup + ESBuild
-
-This package is using ESBuild together will Rollup. TypeScript and JavaScript modules are processed with [esbuild](https://esbuild.github.io/) using [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild).
-
-> **Note** Rollup will inevitably die out as ESBuild starts to become the standard.
-
-### Utilities Helper
-
-The configuration is using [@brixtol/rollup-utils](https://github.com/BRIXTOL/rollup-utils) as a helper module. I maintain this in my work organization.
 
 ### License
 

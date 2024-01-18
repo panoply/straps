@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm eleventy --config=.eleventy.cjs --serve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@panoply/11ty": "^0.2.0",
+    "@sissel/11ty": "link:..",
+    "papyrus": "^0.5.2"
+  }
+}

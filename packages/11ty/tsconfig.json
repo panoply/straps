@@ -1,11 +1,20 @@
 {
   "extends": "@sissel/tsconfig",
-  "exclude": ["node_modules"],
-  "include": ["src/index.ts"],
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/index.ts"
+  ],
   "compilerOptions": {
     "outDir": "dist",
     "incremental": false,
+    "strictNullChecks": false,
     "skipLibCheck": true,
-    "target": "ES2016"
+    "noEmit": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "target": "ES6",
+    "module": "CommonJS"
   }
 }
