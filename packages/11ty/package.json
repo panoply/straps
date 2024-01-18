@@ -1,6 +1,6 @@
 {
   "name": "@sissel/11ty",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An 11ty wrapper with common plugin integrations.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,12 +33,10 @@
     "type-fest": "^4.9.0"
   },
   "peerDependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@panoply/11ty": "^0.2.0"
+    "@11ty/eleventy": "^2.0.1",
+    "@panoply/11ty": "^0.3.0"
   },
   "dependencies": {
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@types/browser-sync": "^2.29.0",
     "fast-glob": "^3.3.2",
     "html-minifier-terser": "7.2.0",
