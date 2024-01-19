@@ -60,9 +60,7 @@ export interface ISVGSprite {
   spriteConfig: SVGSpriter.Config
 }
 
-const spriteCache = {};
-
-async function exists (path) {
+async function exists (path: string) {
   try {
     await access(path);
     return true;
