@@ -182,7 +182,7 @@ export function sprite (eleventyConfig: EleventyConfig, pluginConfig: ISVGSprite
       outputPath: '',
       globalClass: '',
       defaultClass: '',
-      spriteShortCode: 'svgsprite',
+      spriteShortCode: 'sprite',
       svgShortCode: 'svg',
       spriteConfig: {
         mode: {
