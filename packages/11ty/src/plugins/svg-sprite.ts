@@ -157,7 +157,7 @@ function SVGSprite (config: ISVGSprite) {
 
   return {
     compile,
-    getSprite: (code = spriteShortCode) => spriteCache[code].spriteContent
+    getSprite: (code = spriteShortCode) => cache[code].spriteContent
   };
 
 }
