@@ -226,10 +226,13 @@ export function sprite (eleventyConfig: EleventyConfig, pluginConfig: ISVGSprite
       const descAttr = desc || `${nameAttr} icon`;
       const uniqueID = (idCounter++).toString(36);
 
-      return `<svg class="${classesAttr}" aria-labelledby="symbol-${nameAttr}-desc-${uniqueID}" role="group">
-                  <desc id="symbol-${nameAttr}-desc-${uniqueID}">${descAttr}</desc>
-                  <use xlink:href="#svg-${nameAttr}"></use>
-              </svg>`;
+      return [
+        `<svg class="${classesAttr}" aria-labelledby="symbol-${nameAttr}-desc-${uniqueID}" role="group">`,
+        `<desc id="symbol-${nameAttr}-desc-${uniqueID}">${descAttr}</desc>`,
+        `<use xlink:href="#svg-${nameAttr}"></use>`,
+        '</svg>'
+      ].join('');
+
     });
   }
 };

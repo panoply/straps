@@ -1,13 +1,12 @@
 {
-  "name": "@sissel/11ty",
-  "version": "0.2.2",
-  "description": "An 11ty wrapper with common plugin integrations.",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "name": "@sissel/11ty-html-terser",
+  "version": "0.0.1",
+  "description": "11ty Plugin which will pass output through HTML Terser",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup --minify",
-    "bump": "pnpm up @sissel/rollup-config -r",
     "postversion": "pnpm bump",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,7 +2,7 @@ import type { EleventyConfig } from '@panoply/11ty';
 import { readdirSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-export function versions (eleventyConfig: EleventyConfig, { version }: { version: string} = { version: null }) {
+export function versions (eleventyConfig: EleventyConfig, { version }: { version: string } = { version: null }) {
 
   if (version === null) {
     console.warn('[version-plugin] Missing the { version } parameter ');

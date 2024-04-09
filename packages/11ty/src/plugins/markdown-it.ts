@@ -145,13 +145,9 @@ export function markdown (config: EleventyConfig, options: IMarkdown) {
       return syntax;
 
     }
-  }).use(mdcontainer, 'note', {
-    render: notes
-  }).use(mdcontainer, 'grid', {
-    render: (tokens: md.Token[], idx: number) => (
-      grid(markdown, tokens, idx)
-    )
-  });
+  })
+    .use(mdcontainer, 'note', { render: notes })
+    .use(mdcontainer, 'grid', { render: (tokens: md.Token[], idx: number) => grid(markdown, tokens, idx) });
 
   markdown.disable('code');
   config.setLibrary('md', markdown);

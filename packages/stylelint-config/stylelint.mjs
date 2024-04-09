@@ -28,9 +28,15 @@ export default {
     "rule-empty-line-before": [
       "always",
       {
-        except: ["inside-block-and-after-rule"],
-        ignore: ["after-comment", "first-nested", "inside-block", "after-custom-property"],
-      },
-    ],
-  },
+        except: [
+          "inside-block-and-after-rule", "after-custom-property"
+        ],
+        ignore: [
+          "after-comment",
+          "first-nested",
+          "inside-block"
+        ],
+      }
+    ]
+  }
 };
