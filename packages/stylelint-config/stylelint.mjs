@@ -29,7 +29,7 @@ export default {
       "always",
       {
         except: [
-          "inside-block-and-after-rule", "after-custom-property"
+          "inside-block-and-after-rule"
         ],
         ignore: [
           "after-comment",
